@@ -62,7 +62,15 @@ if(isset($_POST['login'])){			// Has the login button been pressed? Y/N
 	// setting all the necessary data to session
 	$_SESSION['varname'] = $rows;
 
-	header("location:adminpage.php");
+	if($rows['role'] == 'admin'){
+		header("location:adminpage.php");
+	}
+	if($rows['role'] == 'mgr'){
+		header("location:team_page/index.php");
+	}
+
+
+	
 	}
 	} else {
 		echo "0 results";								// Returns a string to the screen
