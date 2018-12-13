@@ -11,6 +11,7 @@ $dbconn = new mysqli("localhost", "root", "", "gameon") OR DIE("Error Message" .
       $Rank = $rsx['Rank'];
       $Value = $rsx['Value'];
       $Salary = $rsx['Salary'];
+      $profile_picture_path = $rsx['profile_picture_path'];
     }
   }
 
@@ -21,9 +22,9 @@ $dbconn = new mysqli("localhost", "root", "", "gameon") OR DIE("Error Message" .
 <html>
 <body>
 
-<form action="employee_action_page.php" method="post">
+<form action="employee_action_page.php" method="post" enctype="multipart/form-data">
   <fieldset>
-    <legend>Edit Employee information:</legend>
+    <legend>Edit Member information:</legend>
      Name:
     <input type="text" name="firstname" value="<?php echo $name?>">
     <br>
@@ -41,6 +42,9 @@ $dbconn = new mysqli("localhost", "root", "", "gameon") OR DIE("Error Message" .
     <br>
     Salary:
     <input type="text" name="Salary" value="<?php echo $Salary?>">
+    <br>
+    
+    <input type="file" name="image">
     <br>
     <br>
     <input style="display:none" type="text" name="emp_id" value="<?php echo $emp_id?>">

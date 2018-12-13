@@ -68,6 +68,15 @@ if(isset($_POST['login'])){			// Has the login button been pressed? Y/N
 	if($rows['role'] == 'mgr'){
 		header("location:team_page/index.php");
 	}
+	if($rows['role'] == 'member'){
+		header("location:member/index.php");
+	}
+
+	else{
+		echo "Unauthorized Page";
+	}
+
+
 
 
 	
@@ -77,7 +86,7 @@ if(isset($_POST['login'])){			// Has the login button been pressed? Y/N
 	}
 	echo '</table>';
 } 
-
+ 
 
 if(isset($_POST['delete'])){							// Has the delete button been pressed? Y/N
 	$conn2 = new mysqli("localhost", "root", "", "gameon") OR

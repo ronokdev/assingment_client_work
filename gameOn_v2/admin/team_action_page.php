@@ -10,7 +10,7 @@ $firstname = $_POST['firstname'];
 $position = $_POST['position'];
 $Manager = $_POST['Manager'];
 $captain = $_POST['Captain'];
-$team_id = isset($_POST['team_id']);
+$team_id = $_POST['team_id'];
 
 
 

@@ -27,6 +27,8 @@
 		<div data-role="main" class="ui-content">
 			<h3>Our first mobile page</h3>
 			<a href="#login">Login/Register</a>
+			<br>
+			<a href="project.php">Project/Match</a>
 			<a href="#settings">
 				<button style="width:15px;height:25px;" data-icon="gear" data-position="right"></button>
 			</a>
@@ -68,6 +70,7 @@
 		<a href="#index">Home</a>
 		
 		<a href="#login">Login/Register</a>
+		<a href="project.php">Project/Match</a>	
 
 	</div>
 	<div data-role="footer" data-theme="b" data-position="fixed">
@@ -77,21 +80,52 @@
 
 
 
-
-
-
-
-<!-- This is our Contact Us page -->
 <div data-role="page" id="contact">
-<div data-role="header" data-theme="b"><h1>Contact Game On!!</h1></div>
-<div data-role="main" class="ui-content">
-	<h3>Contacting Game On:</h3>
-	
-	<a href="#login">Login/Register</a>
-	
+	<div data-role="header" data-theme="b">
+		<h1>About Game On!!</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+		<form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+		<a href="#index">Home</a>
+		
+		<a href="#login">Login/Register</a>
+		<a href="project.php">Project/Match</a>	
+
+	</div>
+	<div data-role="footer" data-theme="b" data-position="fixed">
+		&copy; 2017, Created by Anthony Xavier.
+	</div>
 </div>
-<div data-role="footer" data-theme="b" data-position="fixed">&copy; 2017, Created by Anthony Xavier.</div>
+
+
+
 </div>
+
+
+
+
+
+
+
+
 
 
 

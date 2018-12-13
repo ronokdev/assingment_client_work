@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if($_SESSION['varname']["role"] != 'admin'){
+      echo "You are Not Allowed here.Only Admins can access this page";
+      die();
+}
 // getting sesision data
 $businessId = $_SESSION['varname']['business_id'];
 
