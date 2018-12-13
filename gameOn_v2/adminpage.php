@@ -32,7 +32,12 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>HTML Table</h2>
+<h2>Team Table</h2>
+<a href="admin/insert_team.php"><button><h3>Click To Add Team ! </h3></button></a>
+
+<br>
+<br>
+<br>
 
 <table>
   <tr>
