@@ -9,7 +9,12 @@ $dbconn = new mysqli("localhost", "root", "", "gameon") OR DIE("Error Message" .
 		while($rsx = $rs2->fetch_assoc()) {	
       echo "<pre>";
       var_dump($rsx);
+      $name = $rsx['Name'];
+      $Position = $rsx['Position'];
+      $Manager = $rsx['Manager'];
+      $Captain = $rsx['Captain'];
       echo "</pre>";
+
        
     }
   }
@@ -24,11 +29,11 @@ $dbconn = new mysqli("localhost", "root", "", "gameon") OR DIE("Error Message" .
 <form action="/action_page.php">
   <fieldset>
     <legend>Edit Team information:</legend>
-    First name:<br>
-    <input type="text" name="firstname" value="Mickey">
+     Name:<br>
+    <input type="text" name="firstname" value="<?php echo $name?>">
     <br>
-    Last name:<br>
-    <input type="text" name="lastname" value="Mouse">
+    Position:<br>
+    <input type="text" name="lastname" value="<?php echo $Position?>">
     <br><br>
     <input type="submit" value="Submit">
   </fieldset>
